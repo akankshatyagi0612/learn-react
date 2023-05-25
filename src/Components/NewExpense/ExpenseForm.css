@@ -1,0 +1,32 @@
+.new-expense_main {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.new-expense_control{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    flex-direction: column;
+}
+
+label{
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+input{
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 20rem;
+    max-width: 100%;
+}
+
+.test{
+    /* justify-content: center; */
+}

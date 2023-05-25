@@ -1,6 +1,7 @@
 import React from "react";
 
 import './ExpenseForm.css';
+import Button from "../Button";
 
 const ExpenseForm=()=>{
     return(
@@ -20,7 +21,7 @@ const ExpenseForm=()=>{
                 </div>
             </div>
             <div className="new-expense_actions">
-            <button type="submit">Add Expense</button>
+            <Button type="submit" label="Add Expense" className="expense-item_price test" />
             </div>
         </form>
     )

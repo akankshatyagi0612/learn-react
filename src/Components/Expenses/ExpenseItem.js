@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './ExpenseItem.css';
 import ExpenseDate from './ExpenseDate';
 import Card from '../UI/Card';
+import Button from '../Button';
 
 const ExpenseItem = (props) => {
 
@@ -24,9 +25,10 @@ const ExpenseItem = (props) => {
         </div>
         <div style={{display: 'flex'}}>
         <div className='expense-item_price'>${props.amount}</div>
-        <button onClick={ClickHandler}>Change Title</button></div>
+        <Button onClick={ClickHandler} label="Change Title" />
+        </div>
     </Card>
     );
 }
-
+ 
 export default ExpenseItem;
