@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-
+import styles from '../Expenses/ExpenseItem.module.css';
 import "./ExpenseForm.css";
 import Button from "../Button";
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
@@ -55,7 +55,8 @@ const ExpenseForm = () => {
       amount: enteredAmount,
       date: new Date(enteredDate),
     };
-    console.log(expenseData);
+    
+    props.onSaveExpenseData(expenseData);
     setEnteredTitle('');
     setEnteredAmount('');
     setEnteredDate('');
@@ -97,7 +98,7 @@ const ExpenseForm = () => {
         <Button
           type="submit"
           label="Add Expense"
-          className="expense-item_price test"
+          className={styles['expense-item_price']}
         />
       </div>
     </form>

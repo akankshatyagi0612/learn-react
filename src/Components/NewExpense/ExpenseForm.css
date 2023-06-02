@@ -26,3 +26,12 @@ input{
     width: 20rem;
     max-width: 100%;
 }
+
+.new-expense_actions{
+    text-align: right;
+    cursor: progress;
+}
+
+.test{
+    cursor: pointer;
+}
