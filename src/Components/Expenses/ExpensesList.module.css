@@ -1,0 +1,9 @@
+.expenses-List__notfound{
+    color: white;
+    text-align: center;
+}
+
+.expenses-List{
+    list-style: none;
+    padding: 0;
+}
