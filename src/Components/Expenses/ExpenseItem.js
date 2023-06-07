@@ -6,6 +6,7 @@ import Card from '../UI/Card';
 const ExpenseItem = (props) => {
      
     return (
+    <li className={styles['List-styling']}>
     <Card className={styles['expense-item']}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem'}} className='container'>
         <ExpenseDate date={props.date}/>
@@ -18,6 +19,7 @@ const ExpenseItem = (props) => {
         {/* <Button onClick={ClickHandler} label="Change Title" /> */}
         </div>
     </Card>
+    </li>
     );
 }
  
