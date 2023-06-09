@@ -6,14 +6,14 @@ import ExpensesList from "./ExpensesList";
 import ExpenseChart from "./ExpensesChart";
 
 const Expenses = (props) => {
-  const [filteredYear, setFilteredYear] = useState("2023");
+  const [filteredYear, setFilteredYear] = useState("");
 
   const filterChangeHandler = (selectedYear) => {
     setFilteredYear(selectedYear);
   };
 
   const filteredExpenses = props.items.filter((expenses) => {
-    return expenses.date.getFullYear().toString() === filteredYear;
+    return expenses.date.getFullYear().toString() === filteredYear || filteredYear === '' ;
   });
   
 
@@ -22,6 +22,7 @@ const Expenses = (props) => {
       <ExpensesFilter
         selected={filteredYear}
         onChangeFilter={filterChangeHandler}
+        items={props.items}
       />
 
       <ExpenseChart expenses={filteredExpenses} />
